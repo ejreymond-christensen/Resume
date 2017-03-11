@@ -180,12 +180,15 @@ education.display = function () {
     var formattedSchoolNameDegree= formattedSchoolName + formattedSchoolDegree;
     var formattedSchoolDates= HTMLschoolDates.replace("%data%", school.dates);
     var formattedSchoolLocation= HTMLschoolLocation.replace("%data%", school.location);
+    var formattedSchoolURL= HTMLschoolURL.replace("%data%", school.url);
     $(".education-entry:last").append(formattedSchoolNameDegree, formattedSchoolDates, formattedSchoolLocation);
 
     school.majors.forEach(function(schoolMajors){
       var formattedSchoolMajor= HTMLschoolMajor.replace("%data%", schoolMajors);
       $(".education-entry:last").append(formattedSchoolMajor);
+
     });
+    $(".education-entry:last").append(formattedSchoolURL);
   });
 
   education.onlineCourses.forEach(function(online){
