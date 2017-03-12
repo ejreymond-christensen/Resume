@@ -108,14 +108,6 @@ function initializeMap() {
   var locations;
 
   var mapOptions = {
-    disableDefaultUI: true
-  };
-
-  /*
-  For the map to be displayed, the googleMap var must be
-  appended to #mapDiv in resumeBuilder.js.
-  */
-  map = new google.maps.Map(document.querySelector('#map'), {
     styles: [
       {
         "elementType": "geometry",
@@ -330,7 +322,14 @@ function initializeMap() {
           }
         ]
       }
-    ]});
+    ]
+  };
+
+  /*
+  For the map to be displayed, the googleMap var must be
+  appended to #mapDiv in resumeBuilder.js.
+  */
+  map = new google.maps.Map(document.querySelector('#map'), mapOptions);
 
 
   /*
