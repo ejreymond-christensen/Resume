@@ -226,6 +226,7 @@ html {
   background-color: #f3f3f3;
 }
 
+/*Card outline from w3school - https://www.w3schools.com/howto/howto_css_cards.asp*/
 #workExperience {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
