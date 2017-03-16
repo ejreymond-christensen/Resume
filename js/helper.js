@@ -103,6 +103,7 @@ function initializeMap() {
 
 	var locations;
 
+//Styles from https://mapstyle.withgoogle.com/
 	var mapOptions = {
 		styles: [{
 				"elementType": "geometry",
