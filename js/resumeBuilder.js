@@ -20,7 +20,6 @@ var bio = {
 	biopic: "images/logo.jpg",
 };
 
-  var formattedbiopic= HTMLbioPic.replace("%data%", bio.biopic);
 /* @description - function to append on HTML. */
 bio.display = function() {
 	var formattedName = HTMLheaderName.replace("%data%", bio.name);
