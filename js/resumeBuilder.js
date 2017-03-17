@@ -94,7 +94,7 @@ work.display();
 - Array.
 @description - function to append on HTML. */
 var projects = {
-	web: [{
+	projects: [{
 			title: "Portfolio",
 			dates: "Dec 2016",
 			description: "Udacity Front-End Web Development project. Designed a responsive portfolio website with HTML, CSS and BootStrap.",
@@ -111,7 +111,7 @@ var projects = {
 
 /* @description - function to append on HTML. */
 projects.display = function() {
-	projects.web.forEach(function(project) {
+	projects.projects.forEach(function(project) {
 		$("#projects").append(HTMLprojectStart);
 
 		var formattedProjectTitle = HTMLprojectTitle.replace("%data%", project.title);
@@ -169,26 +169,23 @@ education.display = function() {
 	education.schools.forEach(function(school) {
 		$("#education").append(HTMLschoolStart);
 
-		var formattedSchoolName = HTMLschoolName.replace("%data%", school.name);
+		var formattedSchoolName = HTMLschoolName.replace("%data%", school.name).replace("#", school.url);
 		var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", school.degree);
 		var formattedSchoolNameDegree = formattedSchoolName + formattedSchoolDegree;
 		var formattedSchoolDates = HTMLschoolDates.replace("%data%", school.dates);
 		var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", school.location);
-		var formattedSchoolURL = HTMLschoolURL.replace("%data%", school.url);
 		$(".education-entry:last").append(formattedSchoolNameDegree, formattedSchoolDates, formattedSchoolLocation);
 
 		school.majors.forEach(function(schoolMajors) {
 			var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", schoolMajors);
 			$(".education-entry:last").append(formattedSchoolMajor);
-
 		});
-		$(".education-entry:last").append(formattedSchoolURL);
 	});
 
 	education.onlineCourses.forEach(function(online) {
 		$(".education-entry:last").append(HTMLonlineClasses);
 
-		var formattedonlineTitle = HTMLonlineTitle.replace("%data%", online.title);
+		var formattedonlineTitle = HTMLonlineTitle.replace("%data%", online.title).replace("#", online.url);
 		var formattedonlineSchool = HTMLonlineSchool.replace("%data%", online.school);
 		var formattedonlineSchoolTitle = formattedonlineTitle + formattedonlineSchool;
 		var formattedonlineDates = HTMLonlineDates.replace("%data%", online.dates);
