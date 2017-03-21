@@ -137,7 +137,7 @@ var education = {
 			degree: "BA Multidisciplinary Studies",
 			majors: ["Sociology", "Political Science", "Humanities"],
 			dates: "2010 - 2014",
-			url: "www.utep.edu"
+			url: "http://www.utep.edu"
 		},
 		{
 			name: "Université Blaise Pascal",
