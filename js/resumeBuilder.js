@@ -145,7 +145,7 @@ var education = {
 			degree: "Diplôme Universitaire",
 			majors: ["International Commerce", "French"],
 			dates: "2007 - 2008",
-			url: "www.univ-bpclermont.fr"
+			url: "http://www.univ-bpclermont.fr"
 		},
 		{
 			name: "De Haagse Hoseschool",
@@ -153,14 +153,14 @@ var education = {
 			degree: "Study Abroad",
 			majors: ["European Studies"],
 			dates: "2005 - 2006",
-			url: "www.dehaagsehogeschool.nl"
+			url: "http://www.dehaagsehogeschool.nl"
 		}
 	],
 	onlineCourses: [{
 		title: "Nano-Degree: Front-End Web Development",
 		school: "Udacity",
 		dates: "2016 - 2017",
-		url: "udacity.com"
+		url: "Http://udacity.com"
 	}]
 };
 
